@@ -1,19 +1,30 @@
 
 
-const Header = (course) => {
+const Header = (props) => {
   return (
     <div>
-      <h1>{course.course}</h1>
+      <h1>{props.course}</h1>
     </div>
   )
+}
+
+const Part = (props) => {
+
+  return (
+    <div>
+      <p>{props.name} {props.count}</p>
+    </div>
+  )
+    
+
 }
 
 const Content = (content) => {
   return (
     <div>
-      <p>{content.content.first} {content.content.exe1}</p>
-      <p>{content.content.seco} {content.content.exe2}</p>
-      <p>{content.content.third} {content.content.exe3}</p>
+      <Part name={content.content.first} count={content.content.exe1}/>
+      <Part name={content.content.seco} count={content.content.exe2}/>
+      <Part name={content.content.third} count={content.content.exe3} />
     </div>
   )
 }
