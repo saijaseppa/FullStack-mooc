@@ -7,6 +7,7 @@ import service from './services/persons'
 import ErrorNotification from './components/ErrorNotification'
 
 const App = () => {
+  
 
   const [newName, setNewName] = useState('');
   const [newNumber, setNewNumber] = useState('');
